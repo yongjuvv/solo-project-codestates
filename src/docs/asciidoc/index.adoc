@@ -1,0 +1,58 @@
+= 솔로 프로젝트 API
+:sectnums:
+:toc: left
+:toclevels: 4
+:toc-title: Table of Contents
+:source-highlighter: prettify
+
+Yongjuvv
+
+== 회원 전체 조회
+.curl-request
+include::{snippets}/get-members/curl-request.adoc[]
+
+.http-request
+include::{snippets}/get-members/http-request.adoc[]
+
+.http-response
+include::{snippets}/get-members/http-response.adoc[]
+
+.response-fields
+include::{snippets}/get-members/response-fields.adoc[]
+
+.request-parameters
+include::{snippets}/get-members/request-parameters.adoc[]
+
+== 회원 지역별 조회
+.curl-request
+include::{snippets}/get-members-location/curl-request.adoc[]
+
+.http-request
+include::{snippets}/get-members-location/http-request.adoc[]
+
+.http-response
+include::{snippets}/get-members-location/http-response.adoc[]
+
+.response-fields
+include::{snippets}/get-members-location/response-fields.adoc[]
+
+.request-parameters
+include::{snippets}/get-members-location/request-parameters.adoc[]
+
+== 회원 업종별 조회
+.curl-request
+include::{snippets}/get-members-type/curl-request.adoc[]
+
+.http-request
+include::{snippets}/get-members-type/http-request.adoc[]
+
+.http-response
+include::{snippets}/get-members-type/http-response.adoc[]
+
+.response-fields
+include::{snippets}/get-members-type/response-fields.adoc[]
+
+.request-parameters
+include::{snippets}/get-members-type/request-parameters.adoc[]
+
+

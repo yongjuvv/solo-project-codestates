@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.projectsolo.demo.api.v1.service.MemberServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-08-17T01:31:54" hostname="gim-yongjuui-MacBookAir.local" time="0.434">
+  <properties/>
+  <testcase name="회원_전체_조회_테스트()" classname="com.projectsolo.demo.api.v1.service.MemberServiceTest" time="0.333"/>
+  <testcase name="회원_지역별_조회_테스트()" classname="com.projectsolo.demo.api.v1.service.MemberServiceTest" time="0.07"/>
+  <testcase name="회원_업종별_조회_테스트()" classname="com.projectsolo.demo.api.v1.service.MemberServiceTest" time="0.024"/>
+  <system-out><![CDATA[2022-08-17 10:31:54.884  INFO 12569 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.projectsolo.demo.api.v1.service.MemberServiceTest], using SpringBootContextLoader
+2022-08-17 10:31:54.886  INFO 12569 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.projectsolo.demo.api.v1.service.MemberServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-08-17 10:31:54.886  INFO 12569 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.projectsolo.demo.api.v1.service.MemberServiceTest]: MemberServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-08-17 10:31:54.908  INFO 12569 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.projectsolo.demo.DemoApplication for test class com.projectsolo.demo.api.v1.service.MemberServiceTest
+2022-08-17 10:31:54.913  INFO 12569 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener]
+2022-08-17 10:31:54.914  INFO 12569 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@665574fb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3eb7ff78, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6b83ec49, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@50ad5625, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1d921267, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1c5f6292, org.springframework.test.context.transaction.TransactionalTestExecutionListener@684a34f4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@52ec5ba6, org.springframework.test.context.event.EventPublishingTestExecutionListener@5f606ab6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@384cd83a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@198a653, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3119fcad, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6d7005e2, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@33a39d7e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@77cd1f67]
+2022-08-17 10:31:54.945 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.projectsolo.demo.api.v1.service.MemberServiceTest.회원_전체_조회_테스트]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-08-17 10:31:54.945 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(122759375<open>)] for JPA transaction
+2022-08-17 10:31:54.948 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@7976d382]
+2022-08-17 10:31:54.951  INFO 12569 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@4feea86f testClass = MemberServiceTest, testInstance = com.projectsolo.demo.api.v1.service.MemberServiceTest@6a9c848, testMethod = 회원_전체_조회_테스트@MemberServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@498cf1dc testClass = MemberServiceTest, locations = '{}', classes = '{class com.projectsolo.demo.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@4bef0fe3, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3b956878, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@295eaa7c, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@47605f2f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@239b0f9d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@7975d1d8], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@13e5b262]; rollback [true]
+2022-08-17 10:31:54.967 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(122759375<open>)] for JPA transaction
+2022-08-17 10:31:54.968 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+Hibernate: 
+    select
+        member0_.id as id1_0_0_,
+        member0_.company_location as company_2_0_0_,
+        member0_.company_name as company_3_0_0_,
+        member0_.company_type as company_4_0_0_,
+        member0_.name as name5_0_0_,
+        member0_.password as password6_0_0_,
+        member0_.sex as sex7_0_0_ 
+    from
+        member member0_ 
+    where
+        member0_.id=?
+Hibernate: 
+    call next value for hibernate_sequence
+2022-08-17 10:31:55.073 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(122759375<open>)] for JPA transaction
+2022-08-17 10:31:55.073 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+Hibernate: 
+    select
+        member0_.id as id1_0_0_,
+        member0_.company_location as company_2_0_0_,
+        member0_.company_name as company_3_0_0_,
+        member0_.company_type as company_4_0_0_,
+        member0_.name as name5_0_0_,
+        member0_.password as password6_0_0_,
+        member0_.sex as sex7_0_0_ 
+    from
+        member member0_ 
+    where
+        member0_.id=?
+Hibernate: 
+    call next value for hibernate_sequence
+2022-08-17 10:31:55.079 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(122759375<open>)] for JPA transaction
+2022-08-17 10:31:55.079 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+Hibernate: 
+    insert 
+    into
+        member
+        (company_location, company_name, company_type, name, password, sex, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        member
+        (company_location, company_name, company_type, name, password, sex, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        member0_.id as id1_0_,
+        member0_.company_location as company_2_0_,
+        member0_.company_name as company_3_0_,
+        member0_.company_type as company_4_0_,
+        member0_.name as name5_0_,
+        member0_.password as password6_0_,
+        member0_.sex as sex7_0_ 
+    from
+        member member0_ 
+    order by
+        member0_.id desc limit ?
+Hibernate: 
+    select
+        count(member0_.id) as col_0_0_ 
+    from
+        member member0_
+test
+test1
+2022-08-17 10:31:55.258 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction rollback
+2022-08-17 10:31:55.258 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Rolling back JPA transaction on EntityManager [SessionImpl(122759375<open>)]
+2022-08-17 10:31:55.260 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(122759375<open>)] after transaction
+2022-08-17 10:31:55.261  INFO 12569 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@4feea86f testClass = MemberServiceTest, testInstance = com.projectsolo.demo.api.v1.service.MemberServiceTest@6a9c848, testMethod = 회원_전체_조회_테스트@MemberServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@498cf1dc testClass = MemberServiceTest, locations = '{}', classes = '{class com.projectsolo.demo.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@4bef0fe3, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3b956878, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@295eaa7c, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@47605f2f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@239b0f9d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@7975d1d8], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+2022-08-17 10:31:55.268 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.projectsolo.demo.api.v1.service.MemberServiceTest.회원_지역별_조회_테스트]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-08-17 10:31:55.268 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1841925122<open>)] for JPA transaction
+2022-08-17 10:31:55.269 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@7af4286]
+2022-08-17 10:31:55.271  INFO 12569 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@4feea86f testClass = MemberServiceTest, testInstance = com.projectsolo.demo.api.v1.service.MemberServiceTest@448c4742, testMethod = 회원_지역별_조회_테스트@MemberServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@498cf1dc testClass = MemberServiceTest, locations = '{}', classes = '{class com.projectsolo.demo.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@4bef0fe3, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3b956878, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@295eaa7c, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@47605f2f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@239b0f9d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@7975d1d8], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@13e5b262]; rollback [true]
+2022-08-17 10:31:55.276 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1841925122<open>)] for JPA transaction
+2022-08-17 10:31:55.279 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+Hibernate: 
+    select
+        member0_.id as id1_0_0_,
+        member0_.company_location as company_2_0_0_,
+        member0_.company_name as company_3_0_0_,
+        member0_.company_type as company_4_0_0_,
+        member0_.name as name5_0_0_,
+        member0_.password as password6_0_0_,
+        member0_.sex as sex7_0_0_ 
+    from
+        member member0_ 
+    where
+        member0_.id=?
+Hibernate: 
+    call next value for hibernate_sequence
+2022-08-17 10:31:55.282 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1841925122<open>)] for JPA transaction
+2022-08-17 10:31:55.282 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+Hibernate: 
+    select
+        member0_.id as id1_0_0_,
+        member0_.company_location as company_2_0_0_,
+        member0_.company_name as company_3_0_0_,
+        member0_.company_type as company_4_0_0_,
+        member0_.name as name5_0_0_,
+        member0_.password as password6_0_0_,
+        member0_.sex as sex7_0_0_ 
+    from
+        member member0_ 
+    where
+        member0_.id=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        member
+        (company_location, company_name, company_type, name, password, sex, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        member
+        (company_location, company_name, company_type, name, password, sex, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        member0_.id as id1_0_,
+        member0_.company_location as company_2_0_,
+        member0_.company_name as company_3_0_,
+        member0_.company_type as company_4_0_,
+        member0_.name as name5_0_,
+        member0_.password as password6_0_,
+        member0_.sex as sex7_0_ 
+    from
+        member member0_ 
+    where
+        member0_.company_location=? 
+    order by
+        member0_.id desc limit ?
+Hibernate: 
+    select
+        count(member0_.id) as col_0_0_ 
+    from
+        member member0_ 
+    where
+        member0_.company_location=?
+2022-08-17 10:31:55.333 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction rollback
+2022-08-17 10:31:55.334 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Rolling back JPA transaction on EntityManager [SessionImpl(1841925122<open>)]
+2022-08-17 10:31:55.335 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1841925122<open>)] after transaction
+2022-08-17 10:31:55.336  INFO 12569 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@4feea86f testClass = MemberServiceTest, testInstance = com.projectsolo.demo.api.v1.service.MemberServiceTest@448c4742, testMethod = 회원_지역별_조회_테스트@MemberServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@498cf1dc testClass = MemberServiceTest, locations = '{}', classes = '{class com.projectsolo.demo.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@4bef0fe3, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3b956878, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@295eaa7c, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@47605f2f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@239b0f9d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@7975d1d8], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+2022-08-17 10:31:55.340 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.projectsolo.demo.api.v1.service.MemberServiceTest.회원_업종별_조회_테스트]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-08-17 10:31:55.341 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1779887629<open>)] for JPA transaction
+2022-08-17 10:31:55.341 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@1444e35f]
+2022-08-17 10:31:55.341  INFO 12569 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@4feea86f testClass = MemberServiceTest, testInstance = com.projectsolo.demo.api.v1.service.MemberServiceTest@3f563397, testMethod = 회원_업종별_조회_테스트@MemberServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@498cf1dc testClass = MemberServiceTest, locations = '{}', classes = '{class com.projectsolo.demo.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@4bef0fe3, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3b956878, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@295eaa7c, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@47605f2f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@239b0f9d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@7975d1d8], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@13e5b262]; rollback [true]
+2022-08-17 10:31:55.344 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1779887629<open>)] for JPA transaction
+2022-08-17 10:31:55.344 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+Hibernate: 
+    select
+        member0_.id as id1_0_0_,
+        member0_.company_location as company_2_0_0_,
+        member0_.company_name as company_3_0_0_,
+        member0_.company_type as company_4_0_0_,
+        member0_.name as name5_0_0_,
+        member0_.password as password6_0_0_,
+        member0_.sex as sex7_0_0_ 
+    from
+        member member0_ 
+    where
+        member0_.id=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        member
+        (company_location, company_name, company_type, name, password, sex, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        member0_.id as id1_0_,
+        member0_.company_location as company_2_0_,
+        member0_.company_name as company_3_0_,
+        member0_.company_type as company_4_0_,
+        member0_.name as name5_0_,
+        member0_.password as password6_0_,
+        member0_.sex as sex7_0_ 
+    from
+        member member0_ 
+    where
+        member0_.company_type=? 
+    order by
+        member0_.id desc limit ?
+Hibernate: 
+    select
+        count(member0_.id) as col_0_0_ 
+    from
+        member member0_ 
+    where
+        member0_.company_type=?
+2022-08-17 10:31:55.361 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction rollback
+2022-08-17 10:31:55.361 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Rolling back JPA transaction on EntityManager [SessionImpl(1779887629<open>)]
+2022-08-17 10:31:55.362 DEBUG 12569 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1779887629<open>)] after transaction
+2022-08-17 10:31:55.362  INFO 12569 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@4feea86f testClass = MemberServiceTest, testInstance = com.projectsolo.demo.api.v1.service.MemberServiceTest@3f563397, testMethod = 회원_업종별_조회_테스트@MemberServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@498cf1dc testClass = MemberServiceTest, locations = '{}', classes = '{class com.projectsolo.demo.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@4bef0fe3, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3b956878, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@295eaa7c, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@47605f2f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@239b0f9d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@7975d1d8], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

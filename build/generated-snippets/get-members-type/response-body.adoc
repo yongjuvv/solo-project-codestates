@@ -1,0 +1,4 @@
+[source,options="nowrap"]
+----
+[{"id":1,"name":"test1","password":"aasd","sex":"m","companyName":"01","companyType":"001","companyLocation":"002"},{"id":2,"name":"test","password":"aasd","sex":"m","companyName":"02","companyType":"001","companyLocation":"001"}]
+----

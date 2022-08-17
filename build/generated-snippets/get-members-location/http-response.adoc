@@ -1,0 +1,8 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 230
+
+[{"id":1,"name":"test1","password":"aasd","sex":"m","companyName":"01","companyType":"001","companyLocation":"001"},{"id":2,"name":"test","password":"aasd","sex":"m","companyName":"02","companyType":"002","companyLocation":"001"}]
+----

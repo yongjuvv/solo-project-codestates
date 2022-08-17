@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ http GET 'http://localhost:8080/v1/members/type?page=0&size=2&companyType=001' \
+    'Accept:application/json'
+----

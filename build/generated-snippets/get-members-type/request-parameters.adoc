@@ -1,0 +1,13 @@
+|===
+|Parameter|Description
+
+|`+page+`
+|Page 번호
+
+|`+size+`
+|Page size
+
+|`+companyType+`
+|Type 번호
+
+|===

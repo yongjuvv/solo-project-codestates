@@ -1,0 +1,36 @@
+|===
+|Path|Type|Description
+
+|`+[]+`
+|`+Array+`
+|사용자 리스트
+
+|`+[].id+`
+|`+Number+`
+|사용자 식별자
+
+|`+[].name+`
+|`+String+`
+|사용자 이름
+
+|`+[].sex+`
+|`+String+`
+|사용자 성별
+
+|`+[].companyName+`
+|`+String+`
+|회사명
+
+|`+[].companyType+`
+|`+String+`
+|업종
+
+|`+[].companyLocation+`
+|`+String+`
+|지역
+
+|`+[].password+`
+|`+String+`
+|사용자 패스워드
+
+|===
